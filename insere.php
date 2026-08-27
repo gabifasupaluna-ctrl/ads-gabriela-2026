@@ -1,9 +1,9 @@
-<? php
+<?php
 
-ini_set('display_errors', 1); ini_set('display_startup_errors', 1);error_reporting(E_ALL);
+ini_set('display_errors',1); ini_set('display_startup_errors', 1);error_reporting(E_ALL);
  
 //verifica se existe conexao com bd, caso não tenta criar uma nova 
-$conexao = mysqli_connect ("localhost", "root", "" ) //porta, usuario e senha
+$conexao = mysqli_connect ("localhost", "gabriela", "123456" ) //porta, usuario e senha
 or die("Erro na conexao com banco de dados"); //caso nao consiga conectar
                                              //mostra a mensagem 
 $select_db = mysqli_select_db($conexao,"novo"); //seleciona o banco de dados

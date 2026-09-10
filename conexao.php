@@ -5,14 +5,23 @@ class Conexao{
 public static function getConexao(){
     if (self::$instancia===null){
 
-    }try { 
-        self::$instancia=new $pdo()
-"mysql:host=localhost; dbname=novo;","Denisson","123456"; 
-      self::instancia -> setAttribut(pdo::attr::errmode).
-                          pdo::errmode_exception;
-}catch (pdoexception $e){
-    die("erro na conexão ao bd: .$e ->get Message()");
-}return self::$instancia;
-}
+    try { 
+         self::$instancia= new PDO(
+           "mysql:host=localhost;dbname=novo; 
+            charset=utf8",
+           "gabriela",
+            "123456" 
+     );
+      self::$instancia -> setAttribute(
+        PDO::ATTR_ERRMODE,
+        PDO::ERRMODE_EXCEPTION);
 
+}catch  (PDOException $e){
+    die("Erro na conexão com o banco de dados: " . $e->getMessage());
+}
+      }
+
+        return self::$instancia;
+    }
+}
 ?>

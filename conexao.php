@@ -12,7 +12,7 @@ public static function getConexao(){
            "gabriela",
             "123456" 
      );
-      self::$instancia -> setAttribute(
+      self::$instancia->setAttribute(
         PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION);
 

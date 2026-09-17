@@ -7,8 +7,7 @@ require_once 'conexao.php';
     private $user;
     private $email;
 
-    public function __construct($id, $nome, $user, $email){
-        $this->id = $id;
+    public function __construct($nome, $user, $email){
         $this->nome = $nome;
         $this->user = $user;
         $this->email = $email;
@@ -21,7 +20,6 @@ require_once 'conexao.php';
             $stmt = $pdo->prepare($sql);
 
             $stmt->execute([
-                ':id' => $this->id,
                 ':nome' => $this->nome,
                 ':user' =>$this->user,
                 ':email' => $this->email

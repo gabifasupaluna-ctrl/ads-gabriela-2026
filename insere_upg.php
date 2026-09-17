@@ -6,8 +6,7 @@ error_reporting(E_ALL);
 require_once 'pessoa.php';
 
 if ($_SERVER['REQUEST_METHOD']=== 'POST') {
-
-    $id = $_POST['id'];
+    
     $nome = $_POST['nome'];
     $user = $_POST['user'];
     $email = $_POST['email'];

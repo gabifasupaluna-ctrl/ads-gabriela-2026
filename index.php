@@ -7,7 +7,7 @@
 </head>
 <body>
     <h3>Formulário de Cadastro</h3>
-    <form action="insere.php" method="post">
+    <form action="insere_upg.php" method="post">
     <label for="nome">Nome: </label>
     <input type="text" name="nome" />
     <br />
